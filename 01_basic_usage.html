@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>JSONEditor | Basic usage</title>
+
+  <link href="jsoneditor.css" rel="stylesheet" type="text/css">
+  <script src="jsoneditor.js"></script>
+
+  <style type="text/css">
+    #jsoneditor {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+<p>
+  <button id="setJSON">Set JSON</button>
+  <button id="getJSON">Get JSON</button>
+</p>
+<div id="jsoneditor"></div>
+
+<script>
+  // create the editor
+  var container = document.getElementById('jsoneditor');
+  var options = {};
+  var editor = new JSONEditor(container, options);
+
+  // set json
+  document.getElementById('setJSON').onclick = function () {
+    var json = {
+     "lines": [
+    {
+      "id": "800000041161",
+      "msisdn": "4253946168",
+      "sim": "8901260422766874707",
+      "simType": [
+        "GBA"
+      ],
+      "imsi": "310260426687470",
+      "nickName": "Line1",
+      "firstName": "Testsami",
+      "lastName": "",
+      "lineType": "INDIVIDUAL",
+      "status": "ACTIVE",
+      "subStatus": "ACT",
+      "activationDate": "03/13/2018",
+      "lineCancellationDate": "",
+      "dataStashCapApplicableOnPlan": false,
+      "lastBillDetails": {
+        "amountDue": "",
+        "changeFromLastBill": ""
+      },
+      "services": [],
+      "earlyTerminationFees": "",
+      "contract": {
+        "startDate": "03/13/2018",
+        "endDate": "",
+        "duration": "NA",
+        "type": "INDIVIDUAL"
+      },
+      "dataPlan": {
+        "limit": "",
+        "uom": "",
+        "usage": ""
+      },
+      "dataPass": [
+        {
+          "id": "AO_SESSION_07_PRE",
+          "name": "On-Demand Domestic On-Network Data / 7 Day / 1GB",
+          "description": "",
+          "noOfPass": "Let nothing stand in between you and your data. Top up your Data with up to 1GB of high-speed data for up to 7 days, whichever comes first. Data pass allotment is used first, before other data buckets.\nThis is available on monthly plans with a monthly allotment of high-speed data. Add a data pass if you’re experiencing reduced data speeds after reaching your data allotment. You can add data passes through My T-Mobile or My Account.",
+          "expirationDate": "",
+          "limit": "",
+          "uom": "",
+          "usage": "",
+          "cancelOrUpdateIndicator": "I",
+          "amount": 10,
+          "status": "ACTIVE",
+          "price": 10
+        },
+        {
+          "id": "AO_SESSION_06_PRE",
+          "name": "Domestic On-Network Data / 1 Day / 500 MB",
+          "description": "",
+          "noOfPass": "On-Demand Domestic On-Network Data / 1 Day / 500MB\nOn Demand Data Passes let you temporarily add high-speed data by the day or week, whenever you need them to supplement your Mobile Internet free data or to top-up a recurring data plan.\n \nYou can add a data pass for a number of reasons, including:\n \n• If you're experiencing reduced data speeds after reaching your data allotment\n• If you're roaming domestically and want additional domestic roaming data\n• If you're roaming internationally and you want a higher data speed\n \nYou can add a data passes through My T-Mobile or My Account.\nOn-Demand Domestic On-Network Data / 1 Day / 500MB Provides up to 500 MB of high-speed on network data for 24 Hours. Available for plans with a monthly allotment of high-speed data.\n",
+          "expirationDate": "2018-03-21T12:01:11-07:00",
+          "limit": 500,
+          "uom": "MB",
+          "usage": 1.1934,
+          "cancelOrUpdateIndicator": "I",
+          "amount": 5,
+          "status": "ACTIVE",
+          "price": 5
+        }
+      ],
+      "futureDataPass": [
+        {
+          "name": "On-Demand Domestic On-Network Data / 7 Day / 1GB",
+          "amount": 10,
+          "status": "",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "servicePlans": [
+        {
+          "id": "AO_SESSION_07_PRE",
+          "url": "",
+          "name": "On-Demand Domestic On-Network Data / 7 Day / 1GB",
+          "description": "",
+          "price": 10,
+          "serviceEnabled": true,
+          "effectiveStartDate": "",
+          "status": "ACTIVE"
+        },
+        {
+          "id": "AO_SESSION_07_PRE",
+          "url": "",
+          "name": "On-Demand Domestic On-Network Data / 7 Day / 1GB",
+          "description": "",
+          "price": 10,
+          "serviceEnabled": false,
+          "effectiveStartDate": "",
+          "status": "PENDING"
+        },
+        {
+          "id": "AO_SESSION_06_PRE",
+          "url": "",
+          "name": "Domestic On-Network Data / 1 Day / 500 MB",
+          "description": "",
+          "price": 5,
+          "serviceEnabled": true,
+          "effectiveStartDate": "",
+          "status": "ACTIVE"
+        }
+      ],
+      "ratePlan": [
+        {
+          "uom": "Units",
+          "price": "3.0",
+          "usage": 3,
+          "limit": 30,
+          "name": "PayGo",
+          "description": "Pay As You Go is perfect for those of us who want a wireless service on an as needed basis.  You get 30 minutes or messages to use at your discretion for as little as $3 per month.  Get more for just $0.10 per minute or message.",
+          "id": "SO_PG_30_PRE",
+          "url": "",
+          "type": "Plan",
+          "amount": "3.0",
+          "status": "ACTIVE",
+          "effectiveStartDate": "03/13/2018",
+          "effectiveEndDate": ""
+        },
+        {
+          "uom": "Minutes",
+          "price": "3.0",
+          "usage": 1,
+          "limit": 30,
+          "name": "PayGo",
+          "description": "Pay As You Go is perfect for those of us who want a wireless service on an as needed basis.  You get 30 minutes or messages to use at your discretion for as little as $3 per month.  Get more for just $0.10 per minute or message.",
+          "id": "SO_PG_30_PRE",
+          "url": "",
+          "type": "Plan",
+          "amount": "3.0",
+          "status": "ACTIVE",
+          "effectiveStartDate": "03/13/2018",
+          "effectiveEndDate": ""
+        },
+        {
+          "uom": "Messages",
+          "price": "3.0",
+          "usage": 2,
+          "limit": 30,
+          "name": "PayGo",
+          "description": "Pay As You Go is perfect for those of us who want a wireless service on an as needed basis.  You get 30 minutes or messages to use at your discretion for as little as $3 per month.  Get more for just $0.10 per minute or message.",
+          "id": "SO_PG_30_PRE",
+          "url": "",
+          "type": "Plan",
+          "amount": "3.0",
+          "status": "ACTIVE",
+          "effectiveStartDate": "03/13/2018",
+          "effectiveEndDate": ""
+        }
+      ],
+      "dataStash": {
+        "id": "",
+        "uom": "",
+        "usage": "",
+        "limit": "",
+        "description": ""
+      },
+      "additionalUsage": [],
+      "totalAdditionalUsage": 0,
+      "musicFreedom": {
+        "id": "",
+        "uom": "",
+        "usage": "",
+        "limit": "",
+        "description": ""
+      },
+      "tethering": {
+        "id": "",
+        "uom": "",
+        "usage": "",
+        "limit": "",
+        "description": ""
+      },
+      "dataCycle": {
+        "remainingDays": 0
+      },
+      "paymentOffers": {
+        "easyPay": "",
+        "paperlessBilling": ""
+      },
+      "eligibility": [
+        {
+          "name": "BingeOn",
+          "eligible": true,
+          "eligibilityDate": "",
+          "ineligibleReasonCode": "",
+          "ineligibleReasonText": "",
+          "status": true
+        }
+      ],
+      "devices": [
+        {
+          "msisdn": "4253946168",
+          "make": "Samsung",
+          "model": "Samsung Galaxy J3 Prime",
+          "imei": "352002093376002",
+          "estimate": "",
+          "purchasePrice": "",
+          "purchaseDate": "",
+          "amountDueToJump": "",
+          "imageUrl": "/images/png/products/phones/Samsung-Galaxy-J3-Prime/250x270_1.png",
+          "lockedStatus": "No block found",
+          "reasonCode": [],
+          "color": "",
+          "memory": "",
+          "warranty": {
+            "date": "",
+            "status": ""
+          },
+          "tenure": {
+            "day": "7",
+            "month": "0",
+            "year": "0"
+          },
+          "ratePlanRestriction": {
+            "name": "",
+            "rateplans": [
+              {
+                "name": ""
+              }
+            ]
+          },
+          "id": "HOSangGaxyJ3Prme"
+        }
+      ],
+      "eips": [],
+      "balance": {
+        "total": "",
+        "taxfee": ""
+      },
+      "callerIdName": "Caller ID Restriction",
+      "callerIdPrivate": "true",
+      "discount": [
+        {
+          "name": "",
+          "amount": "",
+          "effectiveStartDate": "",
+          "effectiveEndDate": "",
+          "@actionCode": ""
+        }
+      ],
+      "addresses": [
+        {
+          "type": "PPU",
+          "addressLine1": "",
+          "addressLine2": "",
+          "cityName": "",
+          "stateCode": "",
+          "zip": "98006",
+          "zipExt": "0000",
+          "sequenceNo": {
+            "name": "AddressSequenceNo",
+            "number": "2"
+          },
+          "characteristicsId": {
+            "name": "AddressCharacteristicsId",
+            "number": "1000064591"
+          }
+        }
+      ],
+      "offers": [
+        "SO_PG_30_PRE",
+        "HOSangGaxyJ3Prme"
+      ],
+      "totalFutureDataPassAmount": 10,
+      "totalActiveSessionPassAmount": 15
+    }
+  ],
+  "pendingOrders": [
+    {
+      "orderId": "CTN1S0Y1906491",
+      "effectiveDate": "",
+      "inventory": [
+        {
+          "lines": [
+            {
+              "offers": [
+                "SO_PG_30_PRE",
+                "AO_SESSION_06_PRE",
+                "HOSangGaxyJ3Prme"
+              ],
+              "lineId": "2046409043"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderId": "CTN1S0XIT06473",
+      "effectiveDate": "",
+      "inventory": [
+        {
+          "lines": [
+            {
+              "offers": [
+                "SO_PG_30_PRE",
+                "AO_SESSION_06_PRE",
+                "HOSangGaxyJ3Prme"
+              ],
+              "lineId": "2041413518"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderId": "CTN1S0XBB06470",
+      "effectiveDate": "",
+      "inventory": [
+        {
+          "lines": [
+            {
+              "offers": [
+                "SO_PG_30_PRE",
+                "HOSangGaxyJ3Prme"
+              ],
+              "lineId": "2041410548"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderId": "CTN1W0VAI04344",
+      "effectiveDate": "",
+      "inventory": [
+        {
+          "lines": [
+            {
+              "offers": [
+                "SO_PG_30_PRE",
+                "HOSangGaxyJ3Prme"
+              ],
+              "lineId": "2006409143"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderId": "CTN1Z0XJM02757",
+      "effectiveDate": "",
+      "inventory": [
+        {
+          "lines": [
+            {
+              "offers": [],
+              "lineId": "1971401768"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+    };
+    editor.set(json);
+  };
+
+  // get json
+  document.getElementById('getJSON').onclick = function () {
+    var json = editor.get();
+    alert(JSON.stringify(json, null, 2));
+  };
+</script>
+</body>
+</html>
