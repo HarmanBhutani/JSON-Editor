@@ -1063,3 +1063,1085 @@ div.jsoneditor-navigation-bar.nav-bar-empty:after {
   position: absolute;
   margin-left: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*harman-css*/
+
+/* reset styling (prevent conflicts with bootstrap, materialize.css, etc.) */
+
+div.jsoneditorharman .jsoneditorharman-search input {
+  height: auto;
+  border: inherit;
+}
+
+div.jsoneditorharman .jsoneditorharman-search input:focus {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+div.jsoneditorharman table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+div.jsoneditorharman td,
+div.jsoneditorharman th {
+  padding: 0;
+  display: table-cell;
+  text-align: left;
+  vertical-align: inherit;
+  border-radius: inherit;
+}
+
+
+div.jsoneditorharman-field,
+div.jsoneditorharman-value,
+div.jsoneditorharman-readonly {
+  border: 1px solid transparent;
+  min-height: 16px;
+  min-width: 32px;
+  padding: 2px;
+  margin: 1px;
+  word-wrap: break-word;
+  float: left;
+}
+
+/* adjust margin of p elements inside editable divs, needed for Opera, IE */
+
+div.jsoneditorharman-field p,
+div.jsoneditorharman-value p {
+  margin: 0;
+}
+
+div.jsoneditorharman-value {
+  word-break: break-word;
+}
+
+div.jsoneditorharman-readonly {
+  min-width: 16px;
+  color: gray;
+}
+
+div.jsoneditorharman-empty {
+  border-color: lightgray;
+  border-style: dashed;
+  border-radius: 2px;
+}
+
+div.jsoneditorharman-field.jsoneditorharman-empty::after,
+div.jsoneditorharman-value.jsoneditorharman-empty::after {
+  pointer-events: none;
+  color: lightgray;
+  font-size: 8pt;
+}
+
+div.jsoneditorharman-field.jsoneditorharman-empty::after {
+  content: "field";
+}
+
+div.jsoneditorharman-value.jsoneditorharman-empty::after {
+  content: "value";
+}
+
+div.jsoneditorharman-value.jsoneditorharman-url,
+a.jsoneditorharman-value.jsoneditorharman-url {
+  color: green;
+  text-decoration: underline;
+}
+
+a.jsoneditorharman-value.jsoneditorharman-url {
+  display: inline-block;
+  padding: 2px;
+  margin: 2px;
+}
+
+a.jsoneditorharman-value.jsoneditorharman-url:hover,
+a.jsoneditorharman-value.jsoneditorharman-url:focus {
+  color: #ee422e;
+}
+
+div.jsoneditorharman td.jsoneditorharman-separator {
+  padding: 3px 0;
+  vertical-align: top;
+  color: gray;
+}
+
+div.jsoneditorharman-field[contenteditable=true]:focus,
+div.jsoneditorharman-field[contenteditable=true]:hover,
+div.jsoneditorharman-value[contenteditable=true]:focus,
+div.jsoneditorharman-value[contenteditable=true]:hover,
+div.jsoneditorharman-field.jsoneditorharman-highlight,
+div.jsoneditorharman-value.jsoneditorharman-highlight {
+  background-color: #FFFFAB;
+  border: 1px solid yellow;
+  border-radius: 2px;
+}
+
+div.jsoneditorharman-field.jsoneditorharman-highlight-active,
+div.jsoneditorharman-field.jsoneditorharman-highlight-active:focus,
+div.jsoneditorharman-field.jsoneditorharman-highlight-active:hover,
+div.jsoneditorharman-value.jsoneditorharman-highlight-active,
+div.jsoneditorharman-value.jsoneditorharman-highlight-active:focus,
+div.jsoneditorharman-value.jsoneditorharman-highlight-active:hover {
+  background-color: #ffee00;
+  border: 1px solid #ffc700;
+  border-radius: 2px;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-string {
+  color: #008000;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-object,
+div.jsoneditorharman-value.jsoneditorharman-array {
+  min-width: 16px;
+  color: #808080;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-number {
+  color: #ee422e;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-boolean {
+  color: #ff8c00;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-null {
+  color: #004ED0;
+}
+
+div.jsoneditorharman-value.jsoneditorharman-invalid {
+  color: #000000;
+}
+
+div.jsoneditorharman-tree button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent url("jsoneditorharman-icons.svg");
+}
+
+div.jsoneditorharman-mode-view tr.jsoneditorharman-expandable td.jsoneditorharman-tree,
+div.jsoneditorharman-mode-form tr.jsoneditorharman-expandable td.jsoneditorharman-tree {
+  cursor: pointer;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-collapsed {
+  background-position: 0 -48px;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-expanded {
+  background-position: 0 -72px;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-contextmenu {
+  background-position: -48px -72px;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-contextmenu:hover,
+div.jsoneditorharman-tree button.jsoneditorharman-contextmenu:focus,
+div.jsoneditorharman-tree button.jsoneditorharman-contextmenu.jsoneditorharman-selected,
+tr.jsoneditorharman-selected.jsoneditorharman-first button.jsoneditorharman-contextmenu {
+  background-position: -48px -48px;
+}
+
+div.jsoneditorharman-tree *:focus {
+  outline: none;
+}
+
+div.jsoneditorharman-tree button:focus {
+  /* TODO: nice outline for buttons with focus
+  outline: #97B0F8 solid 2px;
+  box-shadow: 0 0 8px #97B0F8;
+  */
+  background-color: #f5f5f5;
+  outline: #e5e5e5 solid 1px;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-invisible {
+  visibility: hidden;
+  background: none;
+}
+
+div.jsoneditorharman {
+  color: #1A1A1A;
+  border: 1px solid #3883fa;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  line-height: 100%;
+}
+
+div.jsoneditorharman-tree table.jsoneditorharman-tree {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0;
+}
+
+div.jsoneditorharman-outer {
+  position: static;
+  width: 100%;
+  height: 100%;
+  margin: -35px 0 0 0;
+  padding: 35px 0 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.jsoneditorharman-outer.has-nav-bar {
+  margin: -61px 0 0 0;
+  padding: 61px 0 0 0;
+}
+
+div.jsoneditorharman-outer.has-status-bar {
+  margin: -35px 0 -26px 0;
+  padding: 35px 0 26px 0;
+}
+
+textarea.jsoneditorharman-text,
+.ace-jsoneditorharman {
+  min-height: 150px;
+}
+
+div.jsoneditorharman-tree {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+textarea.jsoneditorharman-text {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline-width: 0;
+  border: none;
+  background-color: white;
+  resize: none;
+}
+
+tr.jsoneditorharman-highlight,
+tr.jsoneditorharman-selected {
+  background-color: #d3d3d3;
+}
+
+tr.jsoneditorharman-selected button.jsoneditorharman-dragarea,
+tr.jsoneditorharman-selected button.jsoneditorharman-contextmenu {
+  visibility: hidden;
+}
+
+tr.jsoneditorharman-selected.jsoneditorharman-first button.jsoneditorharman-dragarea,
+tr.jsoneditorharman-selected.jsoneditorharman-first button.jsoneditorharman-contextmenu {
+  visibility: visible;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-dragarea {
+  background: url("jsoneditorharman-icons.svg") -72px -72px;
+  cursor: move;
+}
+
+div.jsoneditorharman-tree button.jsoneditorharman-dragarea:hover,
+div.jsoneditorharman-tree button.jsoneditorharman-dragarea:focus,
+tr.jsoneditorharman-selected.jsoneditorharman-first button.jsoneditorharman-dragarea {
+  background-position: -72px -48px;
+}
+
+div.jsoneditorharman tr,
+div.jsoneditorharman th,
+div.jsoneditorharman td {
+  padding: 0;
+  margin: 0;
+}
+
+div.jsoneditorharman td {
+  vertical-align: top;
+}
+
+div.jsoneditorharman td.jsoneditorharman-tree {
+  vertical-align: top;
+}
+
+div.jsoneditorharman-field,
+div.jsoneditorharman-value,
+div.jsoneditorharman td,
+div.jsoneditorharman th,
+div.jsoneditorharman textarea,
+.jsoneditorharman-schema-error {
+  font-family: "dejavu sans mono", "droid sans mono", consolas, monaco, "lucida console", "courier new", courier, monospace, sans-serif;
+  font-size: 10pt;
+  color: #1A1A1A;
+}
+
+/* popover */
+
+.jsoneditorharman-schema-error {
+  cursor: default;
+  display: inline-block;
+  /*font-family: arial, sans-serif;*/
+  height: 24px;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+  width: 24px;
+}
+
+div.jsoneditorharman-tree .jsoneditorharman-schema-error {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 4px 0 0;
+  background: url("img/jsoneditorharman-icons.svg")  -168px -48px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover {
+  background-color: #4c4c4c;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  color: #fff;
+  display: none;
+  padding: 7px 10px;
+  position: absolute;
+  width: 200px;
+  z-index: 4;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-above {
+  bottom: 32px;
+  left: -98px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-below {
+  top: 32px;
+  left: -98px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-left {
+  top: -7px;
+  right: 32px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-right {
+  top: -7px;
+  left: 32px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover:before {
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  content: '';
+  display: block;
+  left: 50%;
+  margin-left: -7px;
+  position: absolute;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-above:before {
+  border-top: 7px solid #4c4c4c;
+  bottom: -7px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-below:before {
+  border-bottom: 7px solid #4c4c4c;
+  top: -7px;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-left:before {
+  border-left: 7px solid #4c4c4c;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: '';
+  top: 19px;
+  right: -14px;
+  left: inherit;
+  margin-left: inherit;
+  margin-top: -7px;
+  position: absolute;
+}
+
+.jsoneditorharman-schema-error .jsoneditorharman-popover.jsoneditorharman-right:before {
+  border-right: 7px solid #4c4c4c;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: '';
+  top: 19px;
+  left: -14px;
+  margin-left: inherit;
+  margin-top: -7px;
+  position: absolute;
+}
+
+.jsoneditorharman-schema-error:hover .jsoneditorharman-popover,
+.jsoneditorharman-schema-error:focus .jsoneditorharman-popover {
+  display: block;
+  -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
+  -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
+  -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*@-webkit-keyframes move-up {*/
+
+/*from   { bottom: 24px; }*/
+
+/*to { bottom: 32px; }*/
+
+/*}*/
+
+/*@-moz-keyframes move-up {*/
+
+/*from   { bottom: 24px; }*/
+
+/*to { bottom: 32px; }*/
+
+/*}*/
+
+/*@-ms-keyframes move-up {*/
+
+/*from   { bottom: 24px; }*/
+
+/*to { bottom: 32px; }*/
+
+/*}*/
+
+/* JSON schema errors displayed at the bottom of the editor in mode text and code */
+
+.jsoneditorharman .jsoneditorharman-text-errors {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffef8b;
+  border-top: 1px solid #ffd700;
+}
+
+.jsoneditorharman .jsoneditorharman-text-errors td {
+  padding: 3px 6px;
+  vertical-align: middle;
+}
+
+.jsoneditorharman-text-errors .jsoneditorharman-schema-error {
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 4px 0 0;
+  background: url("img/jsoneditorharman-icons.svg")  -168px -48px;
+}
+/* ContextMenu - main menu */
+
+div.jsoneditorharman-contextmenu-root {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+div.jsoneditorharman-contextmenu {
+  position: absolute;
+  box-sizing: content-box;
+  z-index: 99999;
+}
+
+div.jsoneditorharman-contextmenu ul,
+div.jsoneditorharman-contextmenu li {
+  box-sizing: content-box;
+  position: relative;
+}
+
+div.jsoneditorharman-contextmenu ul {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 128px;
+  background: white;
+  border: 1px solid #d3d3d3;
+  box-shadow: 2px 2px 12px rgba(128, 128, 128, 0.3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.jsoneditorharman-contextmenu ul li button {
+  position: relative;
+  padding: 0 4px 0 0;
+  margin: 0;
+  width: 128px;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  color: #4d4d4d;
+  background: transparent;
+  font-size: 10pt;
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+/* Fix button padding in firefox */
+
+div.jsoneditorharman-contextmenu ul li button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+div.jsoneditorharman-contextmenu ul li button:hover,
+div.jsoneditorharman-contextmenu ul li button:focus {
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-default {
+  width: 96px;
+  /* 128px - 32px */
+}
+
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-expand {
+  float: right;
+  width: 32px;
+  height: 24px;
+  border-left: 1px solid #e5e5e5;
+}
+
+div.jsoneditorharman-contextmenu div.jsoneditorharman-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-image: url("img/jsoneditorharman-icons.svg");
+}
+
+div.jsoneditorharman-contextmenu ul li ul div.jsoneditorharman-icon {
+  margin-left: 24px;
+}
+
+div.jsoneditorharman-contextmenu div.jsoneditorharman-text {
+  padding: 4px 0 4px 24px;
+  word-wrap: break-word;
+}
+
+div.jsoneditorharman-contextmenu div.jsoneditorharman-text.jsoneditorharman-right-margin {
+  padding-right: 24px;
+}
+
+div.jsoneditorharman-contextmenu ul li button div.jsoneditorharman-expand {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0 4px 0 0;
+  background: url("img/jsoneditorharman-icons.svg") 0 -72px;
+  opacity: 0.4;
+}
+
+div.jsoneditorharman-contextmenu ul li button:hover div.jsoneditorharman-expand,
+div.jsoneditorharman-contextmenu ul li button:focus div.jsoneditorharman-expand,
+div.jsoneditorharman-contextmenu ul li.jsoneditorharman-selected div.jsoneditorharman-expand,
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-expand:hover div.jsoneditorharman-expand,
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-expand:focus div.jsoneditorharman-expand {
+  opacity: 1;
+}
+
+div.jsoneditorharman-contextmenu div.jsoneditorharman-separator {
+  height: 0;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-remove > div.jsoneditorharman-icon {
+  background-position: -24px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-remove:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-remove:focus > div.jsoneditorharman-icon {
+  background-position: -24px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-append > div.jsoneditorharman-icon {
+  background-position: 0 -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-append:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-append:focus > div.jsoneditorharman-icon {
+  background-position: 0 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-insert > div.jsoneditorharman-icon {
+  background-position: 0 -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-insert:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-insert:focus > div.jsoneditorharman-icon {
+  background-position: 0 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-duplicate > div.jsoneditorharman-icon {
+  background-position: -48px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-duplicate:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-duplicate:focus > div.jsoneditorharman-icon {
+  background-position: -48px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-asc > div.jsoneditorharman-icon {
+  background-position: -168px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-asc:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-asc:focus > div.jsoneditorharman-icon {
+  background-position: -168px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-desc > div.jsoneditorharman-icon {
+  background-position: -192px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-desc:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-sort-desc:focus > div.jsoneditorharman-icon {
+  background-position: -192px 0;
+}
+
+/* ContextMenu - sub menu */
+
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-selected,
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-selected:hover,
+div.jsoneditorharman-contextmenu ul li button.jsoneditorharman-selected:focus {
+  color: white;
+  background-color: #ee422e;
+}
+
+div.jsoneditorharman-contextmenu ul li {
+  overflow: hidden;
+}
+
+div.jsoneditorharman-contextmenu ul li ul {
+  display: none;
+  position: relative;
+  left: -10px;
+  top: 0;
+  border: none;
+  box-shadow: inset 0 0 10px rgba(128, 128, 128, 0.5);
+  padding: 0 10px;
+  /* TODO: transition is not supported on IE8-9 */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+
+
+div.jsoneditorharman-contextmenu ul li ul li button {
+  padding-left: 24px;
+  animation: all ease-in-out 1s;
+}
+
+div.jsoneditorharman-contextmenu ul li ul li button:hover,
+div.jsoneditorharman-contextmenu ul li ul li button:focus {
+  background-color: #f5f5f5;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-string > div.jsoneditorharman-icon {
+  background-position: -144px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-string:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-string:focus > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-string.jsoneditorharman-selected > div.jsoneditorharman-icon {
+  background-position: -144px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-auto > div.jsoneditorharman-icon {
+  background-position: -120px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-auto:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-auto:focus > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-auto.jsoneditorharman-selected > div.jsoneditorharman-icon {
+  background-position: -120px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-object > div.jsoneditorharman-icon {
+  background-position: -72px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-object:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-object:focus > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-object.jsoneditorharman-selected > div.jsoneditorharman-icon {
+  background-position: -72px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-array > div.jsoneditorharman-icon {
+  background-position: -96px -24px;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-array:hover > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-array:focus > div.jsoneditorharman-icon,
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-array.jsoneditorharman-selected > div.jsoneditorharman-icon {
+  background-position: -96px 0;
+}
+
+div.jsoneditorharman-contextmenu button.jsoneditorharman-type-modes > div.jsoneditorharman-icon {
+  background-image: none;
+  width: 6px;
+}
+div.jsoneditorharman-menu {
+  width: 100%;
+  height: 35px;
+  padding: 2px;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  background-color: #3883fa;
+  border-bottom: 1px solid #3883fa;
+}
+
+div.jsoneditorharman-menu > button,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button {
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+  padding: 0;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  background: transparent url("img/jsoneditorharman-icons.svg");
+  color: white;
+  opacity: 0.8;
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  float: left;
+}
+
+div.jsoneditorharman-menu > button:hover,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button:hover {
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+div.jsoneditorharman-menu > button:focus,
+div.jsoneditorharman-menu > button:active,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button:focus,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button:active {
+  background-color: rgba(255,255,255,0.3);
+}
+
+div.jsoneditorharman-menu > button:disabled,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button:disabled {
+  opacity: 0.5;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-collapse-all {
+  background-position: 0 -96px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-expand-all {
+  background-position: 0 -120px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-undo {
+  background-position: -24px -96px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-undo:disabled {
+  background-position: -24px -120px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-redo {
+  background-position: -48px -96px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-redo:disabled {
+  background-position: -48px -120px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-compact {
+  background-position: -72px -96px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-format {
+  background-position: -72px -120px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-repair {
+  background-position: -96px -96px;
+}
+
+div.jsoneditorharman-menu > div.jsoneditorharman-modes {
+  display: inline-block;
+  float: left;
+}
+
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button {
+  background-image: none;
+  width: auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+div.jsoneditorharman-menu > button.jsoneditorharman-separator,
+div.jsoneditorharman-menu > div.jsoneditorharman-modes > button.jsoneditorharman-separator {
+  margin-left: 10px;
+}
+
+div.jsoneditorharman-menu a {
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  color: white;
+  opacity: 0.8;
+  vertical-align: middle;
+}
+
+div.jsoneditorharman-menu a:hover {
+  opacity: 1;
+}
+
+div.jsoneditorharman-menu a.jsoneditorharman-poweredBy {
+  font-size: 8pt;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+table.jsoneditorharman-search input,
+table.jsoneditorharman-search div.jsoneditorharman-results {
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+  color: #1A1A1A;
+  background: transparent;
+  /* For Firefox */
+}
+
+table.jsoneditorharman-search div.jsoneditorharman-results {
+  color: white;
+  padding-right: 5px;
+  line-height: 24px;
+}
+
+table.jsoneditorharman-search {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table.jsoneditorharman-search div.jsoneditorharman-frame {
+  border: 1px solid transparent;
+  background-color: white;
+  padding: 0 2px;
+  margin: 0;
+}
+
+table.jsoneditorharman-search div.jsoneditorharman-frame table {
+  border-collapse: collapse;
+}
+
+table.jsoneditorharman-search input {
+  width: 120px;
+  border: none;
+  outline: none;
+  margin: 1px;
+  line-height: 20px;
+}
+
+table.jsoneditorharman-search button {
+  width: 16px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: url("img/jsoneditorharman-icons.svg");
+  vertical-align: top;
+}
+
+table.jsoneditorharman-search button:hover {
+  background-color: transparent;
+}
+
+table.jsoneditorharman-search button.jsoneditorharman-refresh {
+  width: 18px;
+  background-position: -99px -73px;
+}
+
+table.jsoneditorharman-search button.jsoneditorharman-next {
+  cursor: pointer;
+  background-position: -124px -73px;
+}
+
+table.jsoneditorharman-search button.jsoneditorharman-next:hover {
+  background-position: -124px -49px;
+}
+
+table.jsoneditorharman-search button.jsoneditorharman-previous {
+  cursor: pointer;
+  background-position: -148px -73px;
+  margin-right: 2px;
+}
+
+table.jsoneditorharman-search button.jsoneditorharman-previous:hover {
+  background-position: -148px -49px;
+}
+div.jsoneditorharman div.autocomplete.dropdown {
+  position: absolute;
+  background: white;
+  box-shadow: 2px 2px 12px rgba(128, 128, 128, 0.3);
+  border: 1px solid #d3d3d3;
+  z-index: 100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  cursor: default;
+  margin: 0;
+  padding-left: 2pt;
+  padding-right: 5pt;
+  text-align: left;
+  outline: 0;
+  font-family: "dejavu sans mono", "droid sans mono", consolas, monaco, "lucida console", "courier new", courier, monospace, sans-serif;
+  font-size: 10pt;
+}
+
+div.jsoneditorharman div.autocomplete.dropdown .item {
+  color: #333;
+}
+
+div.jsoneditorharman div.autocomplete.dropdown .item.hover {
+  background-color: #ddd;
+}
+
+div.jsoneditorharman div.autocomplete.hint {
+  color: #aaa;
+  top: 4px;
+  left: 4px;
+}
+div.jsoneditorharman-treepath {
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+div.jsoneditorharman-treepath div.jsoneditorharman-contextmenu-root {
+  position: absolute;
+  left: 0;
+}
+
+div.jsoneditorharman-treepath span.jsoneditorharman-treepath-element {
+  margin: 1px;
+  font-family: arial, sans-serif;
+  font-size: 10pt;
+}
+
+div.jsoneditorharman-treepath span.jsoneditorharman-treepath-seperator {
+  margin: 2px;
+  font-size: 9pt;
+  font-family: arial, sans-serif;
+}
+
+div.jsoneditorharman-treepath span.jsoneditorharman-treepath-element:hover,
+div.jsoneditorharman-treepath span.jsoneditorharman-treepath-seperator:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+div.jsoneditorharman-statusbar {
+  line-height: 26px;
+  height: 26px;
+  margin-top: -1px;
+  color: #808080;
+  background-color: #ebebeb;
+  border-top: 1px solid #d3d3d3;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10pt;
+}
+
+div.jsoneditorharman-statusbar > .jsoneditorharman-curserinfo-label {
+  margin: 0 2px 0 4px;
+}
+
+div.jsoneditorharman-statusbar > .jsoneditorharman-curserinfo-val {
+  margin-right: 12px;
+}
+
+div.jsoneditorharman-statusbar > .jsoneditorharman-curserinfo-count {
+  margin-left: 4px;
+}
+div.jsoneditorharman-navigation-bar {
+  width: 100%;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #d3d3d3;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #808080;
+  background-color: #ebebeb;
+  font-size: 10pt;
+}
+
+div.jsoneditorharman-navigation-bar.nav-bar-empty:after {
+  content: 'Select a node ...';
+  color: rgba(104, 104, 91, 0.56);
+  position: absolute;
+  margin-left: 5px;
+}

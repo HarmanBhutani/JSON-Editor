@@ -13,6 +13,12 @@
       overflow: auto
     }
 
+      #jsoneditorharman {
+      width: 500px;
+      height: 500px;
+      overflow: auto
+    }
+
   </style>
 
 
@@ -23,6 +29,7 @@
   <button id="getJSON">Get JSON</button>
 </p>
 <div id="jsoneditor"></div>
+<div id="jsoneditorharman"></div>
 
 
 <script>
@@ -30,6 +37,10 @@
   var container = document.getElementById('jsoneditor');
   var options = {};
   var editor = new JSONEditor(container, options);
+
+    var container = document.getElementById('jsoneditorharman');
+  var optionss = {};
+  var editorr = new JSONEditor(container, options);
 
 
 
@@ -395,6 +406,7 @@
   ]
     };
     editor.set(json);
+      editorr.set(json);
   };
 
   // get json
