@@ -21,14 +21,14 @@
 
   </style>
 
-
+   
 </head>
 <body>
 <p>
   <button id="setJSON">Set JSON</button>
   <button id="getJSON">Get JSON</button>
 </p>
-<div id="jsoneditor"></div>
+<div id="jsoneditor" onClick="this.contentEditable='true';"></div>
 <div id="jsoneditorharman"></div>
 
 
@@ -46,7 +46,7 @@
 
   // set json
   document.getElementById('setJSON').onclick = function () {
-    var json = {
+    var jsoddn = {
      "lines": [
     {
       "id": "800000041161",
@@ -405,6 +405,7 @@
     }
   ]
     };
+    var json= document.getElementById('jsoneditor').value;
     editor.set(json);
       editorr.set(json);
   };
