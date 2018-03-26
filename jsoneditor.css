@@ -23,14 +23,6 @@ div.jsoneditor th {
   vertical-align: inherit;
   border-radius: inherit;
 }
-div.jsoneditor th {
-  padding: 0;
-  display: table-cell;
-  text-align: left;
-  vertical-align: inherit;
-  border-radius: inherit;
-}
-
 
 
 div.jsoneditor-field,
