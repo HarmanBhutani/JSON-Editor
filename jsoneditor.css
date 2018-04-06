@@ -1108,8 +1108,8 @@ div.jsoneditorharman .jsoneditorharman-search input {
 
 
 div.jsoneditorharman .jsoneditorharman-search input:focus {
-  border: none !important;
-  box-shadow: none !important;
+  border: inset 4px !important;
+  box-shadow: inset; !important;
 }
 
 div.jsoneditorharman table {
