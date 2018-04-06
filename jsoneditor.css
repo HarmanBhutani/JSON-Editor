@@ -1,12 +1,23 @@
 /* reset styling (prevent conflicts with bootstrap, materialize.css, etc.) */
 
-div.jsoneditor .jsoneditor-search input {
+/*div.jsoneditor .jsoneditor-search input {
   height: auto;
   border: inherit;
+}*/
+
+/*div.jsoneditor .jsoneditor-search input:focus {
+  border: none !important;
+  box-shadow: none !important;
 }
+*/
 
-
-
+.container{ width: 100%; }
+.left-container {
+  position: relative;float: left;
+}
+.right-container {
+  position: relative;float: right; margin-right: 354px ;
+}
 div.jsoneditor table {
   border-collapse: collapse;
   width: auto;
@@ -142,7 +153,15 @@ div.jsoneditor-value.jsoneditor-invalid {
   color: #000000;
 }
 
-
+div.jsoneditor-tree button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background: transparent url("jsoneditor-icons.svg");
+}
 
 div.jsoneditor-mode-view tr.jsoneditor-expandable td.jsoneditor-tree,
 div.jsoneditor-mode-form tr.jsoneditor-expandable td.jsoneditor-tree {
@@ -161,7 +180,9 @@ div.jsoneditor-tree button.jsoneditor-contextmenu {
   background-position: -48px -72px;
 }
 
-
+div.jsoneditor-tree button.jsoneditor-contextmenu:hover,
+div.jsoneditor-tree button.jsoneditor-contextmenu:focus,
+div.jsoneditor-tree button.jsoneditor-contextmenu.jsoneditor-selected,
 tr.jsoneditor-selected.jsoneditor-first button.jsoneditor-contextmenu {
   background-position: -48px -48px;
 }
@@ -213,6 +234,11 @@ div.jsoneditor-outer {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+div.jsoneditor-outer.has-nav-bar {
+  margin: -61px 0 0 0;
+  padding: 61px 0 0 0;
 }
 
 div.jsoneditor-outer.has-status-bar {
@@ -281,10 +307,10 @@ div.jsoneditor td {
 div.jsoneditor td {
   vertical-align: top;
 }
-
+/*
 div.jsoneditor td.jsoneditor-tree {
   vertical-align: top;
-}
+}*/
 
 div.jsoneditor-field,
 div.jsoneditor-value,
@@ -1069,6 +1095,7 @@ div.jsoneditorharman .jsoneditorharman-search input {
   border: inherit;
 }
 
+
 div.jsoneditorharman .jsoneditorharman-search input:focus {
   border: none !important;
   box-shadow: none !important;
@@ -1077,6 +1104,8 @@ div.jsoneditorharman .jsoneditorharman-search input:focus {
 div.jsoneditorharman table {
   border-collapse: collapse;
   width: auto;
+  position: relative;
+  
 }
 
 div.jsoneditorharman td,
@@ -1098,7 +1127,7 @@ div.jsoneditorharman-readonly {
   padding: 2px;
   margin: 1px;
   word-wrap: break-word;
-  float: left;
+  float: right;
 }
 
 /* adjust margin of p elements inside editable divs, needed for Opera, IE */
