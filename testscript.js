@@ -14,13 +14,19 @@
 
     // var json= JSON.parse(document.getElementById('jsoneditor').value);
 
-    var json = document.getElementById('jsoneditor').value;
+try {
+     var json = document.getElementById('jsoneditor').value;
     //json = json.replace(/\\"/g, '"');
     // editor.set(json);
+   // validate= ajv.compile(schema);
     json =JSON.parse(JSON.parse(JSON.stringify(json)));
    
       editorr.set(json);
       var json = editor.get();
+}
+catch(err) {
+    alert("Invalid JSON Format!");
+}
   };
 
   // get json
